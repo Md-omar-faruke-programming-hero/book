@@ -26,12 +26,12 @@ const serachBar=()=>{
         spinner.classList.add('d-none');
     }
     else{
-        // error handler
+        // error handlerr
     document.getElementById('missing').innerText="";
     document.getElementById('inputField').placeholder= "";
        
     // api
-    const url=`http://openlibrary.org/search.json?q=${inputText}`;
+    const url=`https://openlibrary.org/search.json?q=${inputText}`;
     fetch(url)
     .then(res=>res.json())
     .then(data=>bookResult(data.docs));
