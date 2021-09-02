@@ -69,12 +69,21 @@ const bookResult=books=>{
        
         // create div
         const div=document.createElement('div');
-
+   
+        //set dynamic pic if pic not found
+       
+          var img1;
+         if(book.cover_i === undefined){
+            var img1=`image/notfound.jpg`;
+         }else{
+            var img1= `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`;
+         }
+        // const img1= `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`;
         
         div.innerHTML=`
         <div class="  book d-flex shadow-lg ">
                <div class="customclass" style="height: 13rem;">
-                 <img src= "https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class=" w-100 h-100 " alt="" srcset="">
+                 <img src= "${img1}" class=" w-100 h-100 " alt="" srcset="">
                </div>
                <div class="card-body customclass2">
                <h5 class="card-title mb-0">${book.title}</h5>
@@ -83,7 +92,8 @@ const bookResult=books=>{
                <a target="-blank" href=""><button class="btn btn btn-outline-secondary">read</button></a>
               </div>
               
-        </div>  
+        </div> 
+         
         ` ;
         // added div
         bookCard.appendChild(div);
