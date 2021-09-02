@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawasome -->
+    <script src="https://kit.fontawesome.com/d837fa9013.js" crossorigin="anonymous"></script>
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+    <!-- bootstrap link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <!-- fav icon -->
+    <link rel="shortcut icon" href="image/star.png" type="image/x-icon" />
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css" />
+    <title>book list</title>
+  </head>
+  <body>
+    <!-- header start -->
+    <header class="container">
+      <h1 class="text-center mt-3">The Greatest B<i class="fas fa-book-open text-warning"></i>ks of All Time</h1>
+      <hr />
+    </header>
+    <!-- header end -->
+    <!-- main start -->
+    <main>
+      <!-- search bar -->
+      <section class="container mb-5">
+        <div class="input-group mb-3 w-50 mx-auto">
+          <input
+            id="inputField"
+            type="text"
+            class="form-control"
+            placeholder="Search your book here"
+            aria-label="Recipient's username"
+            aria-describedby="button-addon2"
+          />
+            <button onclick="serachBar()" class="btn btn-outline-secondary" type="button" id="button-addon2">
+            submit
+            </button>
+       </div>
+       <!-- search bar end -->
+       <!-- spinner -->
+       <div id="spinner" class="d-flex justify-content-center d-none">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+      <!-- error text area -->
+        <h1 id="missing" class="text-center text-danger bg-black"></h1>
+        <h1 id="resultNotFound" class="text-center text-danger"></h1>
+      </section>
+      <!-- search bar end -->
+
+      <!-- book list card -->
+      <section class="container mx-auto">
+        <div id="bookcard" class=" row row-cols-1 row-cols-lg-2 g-3 mb-5"></div>
+      </section>
+      <!-- book list card end -->
+    </main>
+    <!-- main end -->
+    <!-- foter start -->
+    <footer>
+      <h6 class=" footer text-center ">Copyright © 2021,Md-omar-faruke-programming-hero</h6>
+  </footer>
+  <!-- footer end -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <!-- js file link -->
+    <script src="logic.js"></script>
+    
+  </body>
+</html>

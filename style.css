@@ -1,0 +1,21 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/* book div */
+.book:hover{
+    border: 2px solid red;
+     
+    
+}
+/* book img */
+.customclass{
+    width:25% ;
+}
+/* book details */
+.customclass2{
+    width: 74%;
+}
+/* footer */
+.footer{
+    margin-top: 320px;
+}
